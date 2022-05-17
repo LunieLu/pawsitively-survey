@@ -16,7 +16,7 @@ def feedback():
     """
     print("Please answer the below questions.")
     print("Your answer should be a figure between 0-5")
-    print("0 = Awful; 5 = Absolutely fantastic.\n")
+    print("0 = Thoroughly disagree; 5 = Very much agree.\n")
 
     print("1. Would you recommend Pawsitively Perfect to friends?")
     data_1 = input("Enter answer here:\n")
@@ -25,6 +25,19 @@ def feedback():
     print("2. How happy are you with the service provided?")
     data_2 = input("Enter answer here: \n")
     valid_answer(data_2)
+
+    print("3. How professional is Pawsitively Perfect Pet Care?")
+    data_3 = input("Enter answer here: \n")
+    valid_answer(data_3)
+
+    print("4. Are the staff caring and attentive?")
+    data_4 = input("Enter answer here: \n")
+    valid_answer(data_4)
+
+    print("5. Have the team replied in a timely manner?")
+    data_5 = input("Enter answer here: \n")
+    valid_answer(data_5)
+
 
 def valid_answer(values):
     """
@@ -44,6 +57,7 @@ def valid_answer(values):
 # def thank_you(owner_data):
 #     print(f"Thank you {owner} for completing the survey.")
 #     print(f"We hope you and {pet} have a great day!")
+
 
 def main():
     """
