@@ -29,6 +29,7 @@ def valid_answer(values):
     Raises ValueError if incorrect data has been input.
     """
     try:
+        [int(value) for value in values]
         if len(values) != 1:
             raise ValueError(
                 f"Too many answers"
