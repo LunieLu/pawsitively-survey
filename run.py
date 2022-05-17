@@ -29,15 +29,11 @@ def valid_answer(values):
     Raises ValueError if incorrect data has been input.
     """
     try:
-        if 0 < int(values) < 5:
-            return values
+        if 0 <= int(values) <= 5:
+            print(type(values))
         else:
             raise ValueError(
                 f"Number not between 0-5"
-            )
-        if len(values) != 1:
-            raise ValueError(
-                f"Too many answers"
             )
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
