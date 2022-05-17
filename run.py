@@ -22,6 +22,9 @@ def feedback():
     data_1 = input("Enter answer here:\n")
     valid_answer(data_1)
 
+    print("2. How happy are you with the service provided?")
+    data_2 = input("Enter answer here: \n")
+    valid_answer(data_2)
 
 def valid_answer(values):
     """
@@ -30,7 +33,7 @@ def valid_answer(values):
     """
     try:
         if 0 <= int(values) <= 5:
-            print(type(values))
+            return values
         else:
             raise ValueError(
                 f"Number not between 0-5"
@@ -38,6 +41,9 @@ def valid_answer(values):
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
 
+# def thank_you(owner_data):
+#     print(f"Thank you {owner} for completing the survey.")
+#     print(f"We hope you and {pet} have a great day!")
 
 def main():
     """
