@@ -14,29 +14,30 @@ def feedback():
     User chooses an input 0-5, which must be integers.
     The loop will repeat if user enters an invalid input.
     """
-    print("Please answer the below questions.")
-    print("Your answer should be a figure between 0-5")
-    print("0 = Thoroughly disagree; 5 = Very much agree.\n")
+    while True:
+        print("Please answer the below questions.")
+        print("Your answer should be a figure between 0-5")
+        print("0 = Thoroughly disagree; 5 = Very much agree.\n")
 
-    print("1. Would you recommend Pawsitively Perfect to friends?")
-    data_1 = input("Enter answer here:\n")
-    valid_answer(data_1)
+        print("1. Would you recommend Pawsitively Perfect to friends?")
+        data_1 = input("Enter answer here:\n")
+        valid_answer(data_1)
 
-    print("2. How happy are you with the service provided?")
-    data_2 = input("Enter answer here: \n")
-    valid_answer(data_2)
+        print("2. How happy are you with the service provided?")
+        data_2 = input("Enter answer here: \n")
+        valid_answer(data_2)
 
-    print("3. How professional is Pawsitively Perfect Pet Care?")
-    data_3 = input("Enter answer here: \n")
-    valid_answer(data_3)
+        print("3. How professional is Pawsitively Perfect Pet Care?")
+        data_3 = input("Enter answer here: \n")
+        valid_answer(data_3)
 
-    print("4. Are the staff caring and attentive?")
-    data_4 = input("Enter answer here: \n")
-    valid_answer(data_4)
+        print("4. Are the staff caring and attentive?")
+        data_4 = input("Enter answer here: \n")
+        valid_answer(data_4)
 
-    print("5. Have the team replied in a timely manner?")
-    data_5 = input("Enter answer here: \n")
-    valid_answer(data_5)
+        print("5. Have the team replied in a timely manner?")
+        data_5 = input("Enter answer here: \n")
+        valid_answer(data_5)
 
 
 def valid_answer(values):
@@ -53,6 +54,9 @@ def valid_answer(values):
             )
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
+        return False
+
+    return True
 
 
 def main():
