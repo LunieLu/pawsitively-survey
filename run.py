@@ -1,21 +1,11 @@
-class owner_data:
+def owner_data():
     """
     Get owner's information input from user.
     """
-    def __init__(self, owner, pet):
-        self.owner = name
-        self.pet = pname
-
-    @classmethod
-    def from_input(info):
-        return owner(
-            print("Please tell us your name.")
-            input("Your Name: ")
-        )
-        return pet(
-            print("Please tell us your pet's name.")
-            input("Your pet's name: ")
-        )
+    print("Please tell us your name.")
+    owner = input("Name: \n")
+    print("Please tell us your pet name.")
+    pet = input("Pet name: \n")
 
 
 def feedback():
