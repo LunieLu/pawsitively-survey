@@ -20,14 +20,29 @@ def feedback():
 
     print("1. Would you recommend Pawsitively Perfect to friends?")
     data_1 = input("Enter answer here:\n")
+    valid_answer(data_1)
 
-feedback()
+
+def valid_answer(values):
+    """
+    Will check if values are equal to or between 0-5.
+    Raises ValueError if incorrect data has been input.
+    """
+    try:
+        if len(values) != 1:
+            raise ValueError(
+                f"Too many answers"
+            )
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.\n")
+
 
 def main():
     """
     Run all program functions
     """
     owner_data()
+    feedback()
 
 
 print("Thank you for choosing Pawsitively Perfect Pet Care.")
