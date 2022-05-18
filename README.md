@@ -41,6 +41,9 @@ It has also been validator tested through:
 ## __Acknowledgements__
 
 - As always, I'm thankful to the below groups and people for support during this project:
-    - Code Institute's Slack: Several students helped support me with queries.
-    - #london-community Slack Channel: Support, inspiration, shared resources and reviews of code are the main reasons I managed to complete this project.
-    - [w3Schools.com](https://www.w3schools.com/default.asp): For being an amazing font of tutorials and knowledge for new coding students such as myself.
+    - Code Institute's Slack: 
+        - Several students helped support me with queries.
+    - #london-community Slack Channel:
+        - Support, inspiration, shared resources and reviews of code are the main reasons I managed to complete this project.
+    - [w3Schools.com](https://www.w3schools.com/default.asp): 
+        - For being an amazing font of tutorials and knowledge for new coding students such as myself.
