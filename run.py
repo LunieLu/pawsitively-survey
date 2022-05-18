@@ -18,44 +18,55 @@ def feedback():
     print("Your answer should be a figure between 0-5")
     print("0 = Thoroughly disagree; 5 = Very much agree.\n")
 
-    data_1 = input("1. Would you recommend us to friends? \n")
-    while not valid_answer(data_1):
-        data_1 = input("1. Would you recommend us to friends? \n")
+    questions = [
+        "Would you recommend us to friends",
+        "How happy are you with the service provided",
+        "How professional is Pawsitively Perfect",
+        "Are the staff caring and attentive",
+        "Have the team replied in a timely manner"
+    ]
 
-    data_2 = input("2. How happy are you with the service provided? \n")
-    while not valid_answer(data_2):
-        data_2 = input("2. How happy are you with the service provided? \n")
+    for q in questions:
+        # print(f"{q}?")
+        get_answer(0, 5, f"{q}?")
+            # data = input(f"{q}? \n")
 
-    data_3 = input("3. How professional is Pawsitively Perfect? \n")
-    while not valid_answer(data_3):
-        data_3 = input("3. How professional is Pawsitively Perfect? \n")
+    # data_1 = input("1. Would you recommend us to friends? \n")
+    # while not valid_answer(data_1):
+    #     data_1 = input("1. Would you recommend us to friends? \n")
 
-    data_4 = input("4. Are the staff caring and attentive? \n")
-    while not valid_answer(data_4):
-        data_4 = input("4. Are the staff caring and attentive? \n")
+    # data_2 = input("2. How happy are you with the service provided? \n")
+    # while not valid_answer(data_2):
+    #     data_2 = input("2. How happy are you with the service provided? \n")
 
-    data_5 = input("5. Have the team replied in a timely manner? \n")
-    while not valid_answer(data_5):
-        data_5 = input("5. Have the team replied in a timely manner? \n")
+    # data_3 = input("3. How professional is Pawsitively Perfect? \n")
+    # while not valid_answer(data_3):
+    #     data_3 = input("3. How professional is Pawsitively Perfect? \n")
+
+    # data_4 = input("4. Are the staff caring and attentive? \n")
+    # while not valid_answer(data_4):
+    #     data_4 = input("4. Are the staff caring and attentive? \n")
+
+    # data_5 = input("5. Have the team replied in a timely manner? \n")
+    # while not valid_answer(data_5):
+    #     data_5 = input("5. Have the team replied in a timely manner? \n")
 
 
-def valid_answer(values):
+def get_answer(min, max, prompt):
     """
     Will check if values are equal to or between 0-5.
     Raises ValueError if incorrect data has been input.
     """
-    try:
-        if 0 <= int(values) <= 5:
-            return values
+    while True:
+        answer = input(prompt)
+        print(answer)
+        if answer.isnumeric():
+            if min <= int(answer) <= max:
+                return int(answer)
+            else:
+                print("Number not between 0-5")
         else:
-            raise ValueError(
-                "Number not between 0-5"
-            )
-    except ValueError as e:
-        print(f"Invalid data: {e}, please try again.\n")
-        return False
-
-    return True
+            print("This is not a number, please try again.")
 
 
 def main():
