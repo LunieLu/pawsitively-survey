@@ -14,30 +14,29 @@ def feedback():
     User chooses an input 0-5, which must be integers.
     The loop will repeat if user enters an invalid input.
     """
-    while True:
-        print("Please answer the below questions.")
-        print("Your answer should be a figure between 0-5")
-        print("0 = Thoroughly disagree; 5 = Very much agree.\n")
+    print("Please answer the below questions.")
+    print("Your answer should be a figure between 0-5")
+    print("0 = Thoroughly disagree; 5 = Very much agree.\n")
 
-        print("1. Would you recommend Pawsitively Perfect to friends?")
-        data_1 = input("Enter answer here:\n")
-        valid_answer(data_1)
+    data_1 = input("1. Would you recommend Pawsitively Perfect to friends? \n")
+    while not valid_answer(data_1):
+        data_1 = input("1. Would you recommend Pawsitively Perfect to friends? \n")
 
-        print("2. How happy are you with the service provided?")
-        data_2 = input("Enter answer here: \n")
-        valid_answer(data_2)
+    data_2 = input("2. How happy are you with the service provided? \n")
+    while not valid_answer(data_2):
+        data_2 = input("2. How happy are you with the service provided? \n")        
 
-        print("3. How professional is Pawsitively Perfect Pet Care?")
-        data_3 = input("Enter answer here: \n")
-        valid_answer(data_3)
+    data_3 = input("3. How professional is Pawsitively Perfect Pet Care? \n")
+    while not valid_answer(data_3):
+        data_3 = input("3. How professional is Pawsitively Perfect Pet Care? \n")
+    
+    data_4 = input("4. Are the staff caring and attentive? \n")
+    while not valid_answer(data_4):
+        data_4 = input("4. Are the staff caring and attentive? \n")
 
-        print("4. Are the staff caring and attentive?")
-        data_4 = input("Enter answer here: \n")
-        valid_answer(data_4)
-
-        print("5. Have the team replied in a timely manner?")
-        data_5 = input("Enter answer here: \n")
-        valid_answer(data_5)
+    data_5 = input("5. Have the team replied in a timely manner? \n")
+    while not valid_answer(data_5):
+        data_5 = input("5. Have the team replied in a timely manner? \n")
 
 
 def valid_answer(values):
@@ -65,6 +64,8 @@ def main():
     """
     owner_data()
     feedback()
+    print("Thank you for taking the time to complete the survey!")
+    print("We hope you have a great day.")
 
 
 print("Thank you for choosing Pawsitively Perfect Pet Care.")
