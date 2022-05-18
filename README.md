@@ -1,31 +1,42 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **A Pawsitively Perfect Survey** - A Milestone Project
 
-Welcome Steph B,
+## __Introduction__
+---
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Hello!
 
-## Reminders
+Welcome to a Code Institute milestone project - This is my third project as part of CI's Full Stack Diploma in Software Development.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+This project was created with Python 3 and is a user survey for the company that my first project was based off; "Pawsitively Perfect Pet Care" (Which is a real company, owned by my mother!)
 
-## Creating the Heroku app
+The purpose of this short survey is to garner responses from customers to establish how happy they are with the service provided by Pawsitively Perfect Pet Care.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+I appreciate you taking the time to look over this project and I am eager to explain more about it below.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## __Features__
+---
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## __Testing__
+---
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+I have tested this project manually:
 
-Connect your GitHub repository and deploy as normal.
+It has also been validator tested through:
+- [PEP8 online check](http://pep8online.com/)
+    - Upon first check, the validator returned 2 yellow errors.
+        - This was due to whitespace within the code.
+        - This was quickly removed and the code was pushed to github and tested once more through the validation process.
+            - The second check came back with an "All right" result.
 
-## Constraints
+## __Credits__
+---
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+- Code Institute for the deployment terminal and template.
+- Code inspired by Code Institute's Anna Greaves' "Love Sandwiches" walkthrough project; including main structure and influence for the valid_answers validation loop.
 
------
-Happy coding!
+## __Acknowledgements__
+
+- As always, I'm thankful to the below groups and people for support during this project:
+    - Code Institute's Slack: Several students helped support me with queries.
+    - #london-community Slack Channel: Support, inspiration, shared resources and reviews of code are the main reasons I managed to complete this project.
+    - [w3Schools.com](https://www.w3schools.com/default.asp): For being an amazing font of tutorials and knowledge for new coding students such as myself.
