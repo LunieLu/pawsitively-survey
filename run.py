@@ -18,18 +18,18 @@ def feedback():
     print("Your answer should be a figure between 0-5")
     print("0 = Thoroughly disagree; 5 = Very much agree.\n")
 
-    data_1 = input("1. Would you recommend Pawsitively Perfect to friends? \n")
+    data_1 = input("1. Would you recommend us to friends? \n")
     while not valid_answer(data_1):
-        data_1 = input("1. Would you recommend Pawsitively Perfect to friends? \n")
+        data_1 = input("1. Would you recommend us to friends? \n")
 
     data_2 = input("2. How happy are you with the service provided? \n")
     while not valid_answer(data_2):
-        data_2 = input("2. How happy are you with the service provided? \n")        
+        data_2 = input("2. How happy are you with the service provided? \n")
 
-    data_3 = input("3. How professional is Pawsitively Perfect Pet Care? \n")
+    data_3 = input("3. How professional is Pawsitively Perfect? \n")
     while not valid_answer(data_3):
-        data_3 = input("3. How professional is Pawsitively Perfect Pet Care? \n")
-    
+        data_3 = input("3. How professional is Pawsitively Perfect? \n")
+
     data_4 = input("4. Are the staff caring and attentive? \n")
     while not valid_answer(data_4):
         data_4 = input("4. Are the staff caring and attentive? \n")
@@ -49,7 +49,7 @@ def valid_answer(values):
             return values
         else:
             raise ValueError(
-                f"Number not between 0-5"
+                "Number not between 0-5"
             )
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
