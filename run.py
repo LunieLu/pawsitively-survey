@@ -3,9 +3,9 @@ def owner_data():
     Get owner's information input from user.
     """
     print("Please tell us your name.")
-    owner = input("Name: \n")
+    owner_data.owner = input("Name: \n")
     print("Please tell us your pet name.")
-    pet = input("Pet name: \n")
+    owner_data.pet = input("Pet name: \n")
 
 
 def feedback():
@@ -64,8 +64,9 @@ def main():
     """
     owner_data()
     feedback()
-    print("Thank you for taking the time to complete the survey!")
-    print("We hope you have a great day.")
+    print(f"Thank you {owner_data.owner}!")
+    print("We appreciate you taking the time to complete our survey.")
+    print(f"We hope you and {owner_data.pet} have a great day.")
 
 
 print("Thank you for choosing Pawsitively Perfect Pet Care.")
