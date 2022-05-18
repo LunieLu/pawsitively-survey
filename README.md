@@ -9,7 +9,7 @@ Welcome to a Code Institute milestone project - This is my third project as part
 
 This project was created with Python 3 and is a user survey for the company that my first project was based off; "Pawsitively Perfect Pet Care" (Which is a real company, owned by my mother!)
 
-The purpose of this short survey is to garner responses from customers to establish how happy they are with the service provided by Pawsitively Perfect Pet Care.
+The purpose of this short survey is to gather responses from customers to establish how happy they are with the service provided by Pawsitively Perfect Pet Care.
 
 I appreciate you taking the time to look over this project and I am eager to explain more about it below.
 
@@ -27,6 +27,10 @@ It has also been validator tested through:
         - This was due to whitespace within the code.
         - This was quickly removed and the code was pushed to github and tested once more through the validation process.
             - The second check came back with an "All right" result.
+
+## __Deployment__
+---
+
 
 ## __Credits__
 ---
