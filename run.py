@@ -6,9 +6,9 @@ def owner():
     """
     owner_data = ['Name', 'Pet Name']
     user_input = ''
-    user = dict.fromkeys(owner_data, user_input)
-    user['Name'] = input("Please tell us your name: \n")
-    user['Pet Name'] = input("Please tell us your pet's name: \n")
+    owner.user = dict.fromkeys(owner_data, user_input)
+    owner.user['Name'] = input("Please tell us your name: \n")
+    owner.user['Pet Name'] = input("Please tell us your pet's name: \n")
 
 
 def feedback():
@@ -17,10 +17,7 @@ def feedback():
     User chooses an input 0-5, which must be integers.
     The loop will repeat if user enters an invalid input.
     """
-    print("Please answer the below questions.")
-    print("Your answer should be a figure between 0-5")
-    print("0 = Thoroughly disagree; 5 = Very much agree.\n")
-    final_answers = []
+    feedback.final_answers = []
 
     questions = [
         "Would you recommend us to friends",
@@ -29,19 +26,14 @@ def feedback():
         "Are the staff caring and attentive",
         "Have the team replied in a timely manner"
     ]
-    # loop over each question
-    for q in questions:
-        # get_answer(0, 5, f"{q}? \n")
-        # create variable, give it a value
-        answer = get_answer(0, 5, f"{q}? \n")
-        # append answer to final_answers list
-        final_answers.append(answer)
-        # done
 
-    return final_answers
+    for question in questions:
+        answer = get_answer(0, 5, f"{question}? \n")
+        feedback.final_answers.append(answer)
+    return feedback.final_answers
 
 
-def get_answer(min, max, prompt):
+def get_answer(low, high, prompt):
     """
     Will check if values are equal to or between 0-5.
     Raises ValueError if incorrect data has been input.
@@ -49,7 +41,7 @@ def get_answer(min, max, prompt):
     while True:
         answer = input(prompt)
         if answer.isnumeric():
-            if min <= int(answer) <= max:
+            if low <= int(answer) <= high:
                 return int(answer)
             else:
                 print("Number not between 0-5")
@@ -57,14 +49,49 @@ def get_answer(min, max, prompt):
             print("This is not a number, please try again.")
 
 
+def confirm():
+    """
+    Checks if user is happy with input by confirming y/n.
+    If y, survey ends.
+    If n, loops back to questions.
+    If neither, provides error and repeats y/n question.
+    """
+    user_confirm = input("Are you happy with your answers? y/n: \n")
+    if user_confirm == "y":
+        print("Thank you!")
+        print(f"Hope you and {owner.user['Pet Name']} have a lovely day!")
+    elif user_confirm == "n":
+        main_repeated()
+    else:
+        print("Please answer y or n.")
+        confirm()
+
+
 def main():
     """
     Run all program functions
     """
     owner()
+    print("Please answer the below questions.")
+    print("Your answer should be a figure between 0-5")
+    print("0 = Thoroughly disagree; 5 = Very much agree.\n")
     feedback()
-    # print(f"Thank you {owner(user['Name'])}!")
-    print(f"Here are your final answers: {answer_list}")
+    print(f"Thank you {owner.user['Name']}!")
+    print(f"Here are your final answers: {feedback.final_answers}")
+    confirm()
+
+
+def main_repeated():
+    """
+    Repeats all program functions
+    """
+    print("Please answer the below questions.")
+    print("Your answer should be a figure between 0-5")
+    print("0 = Thoroughly disagree; 5 = Very much agree.\n")
+    feedback()
+    print(f"Thank you {owner.user['Name']}!")
+    print(f"Here are your final answers: {feedback.final_answers}")
+    confirm()
 
 
 print("Thank you for choosing Pawsitively Perfect Pet Care.")
