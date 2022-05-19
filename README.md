@@ -15,55 +15,55 @@ I appreciate you taking the time to look over this project and I am eager to exp
 ## __Features__
 
 ### __Owner Data__
-- Accepts user input
-    - Collection of User's Name & Pet Name
-    - Information stored in a dictionary
+- Accepts user input:
+    - Collection of User's Name & Pet Name.
+    - Information stored in a dictionary.
 
 ### __Survey Questions__
-- User is asked 5 questions
-    - Code loops through questions one at a time
-    - Accepts user input (A number between 0-5)
-        - Correct answer will be added to an empty list
+- User is asked 5 questions.
+    - Code loops through questions one at a time.
+    - Accepts user input `A number between 0-5`:
+        - Correct answer will be added to an empty list.
 
 ### __Data Validation__
-- User answers to survey questions are checked for incorrect values
+- User answers to survey questions are checked for incorrect values:
     - If a user provides a non-integer answer, the following error is provided:
-        - "This is not a number, please try again."
+        - `This is not a number, please try again.`
     - If a user provides an integer that is below 0 or above 5, the following error is provided:
-        - "Number not between 0-5"
-    - The question is then looped for the user to provide a valid answer
-    - Once a valid answer has been provided, the loop ends
+        - `Number not between 0-5`
+    - The question is then looped for the user to provide a valid answer.
+    - Once a valid answer has been provided, the loop ends.
 
 ### __Final Answers__
-- Collective list of answers provided by the user in the Survey Questions section
-    - Information is returned to the user in the terminal
+- Collective list of answers provided by the user in the `Survey Questions` section.
+    - Information is returned to the user in the terminal.
 
 ### __Confirm Final Answers__
-- Code provides a list of the user's answers from each of the survey questions
-    - if statement requests user to confirm if the final answers are correct, with y or n (Which stands for yes or no)
-        - If user answers y for yes:
-            - Prints a statement thanking the user
-            - Prints a statement telling the user and their pet (data called from Owner Data section) to have a lovely day
+- Code provides a list of the user's answers from each of the survey questions.
+    - if statement requests user to confirm if the final answers are correct, with `y` or `n` (Which stands for yes or no).
+        - If user answers `y` for yes:
+            - Prints a statement thanking the user.
+            - Prints a statement telling the user and their pet (data called from Owner Data section) to have a lovely day.
             - Loop ends
-        - If user answers n for no:
-            - All questions from the Survey Questions function are repeated
+        - If user answers `n` for no:
+            - All questions from the Survey Questions function are repeated.
         - If user provides an input that is neither yes or no:
-            - Code prints a statement that tells the user to please provide a yes or no
+            - Code prints a statement that tells the user to please provide a yes or no.
 
 ### __Other Features__
-- Other features present in the Main function:
+- Other features present in the `Main` function:
     - Print statements:
-        - Today's date is printed for user's information
-        - Request for user to answer the below questions
-        - Explanation of how to answer and the 0-5 figures for the answer input (0 = Thoroughly disagree; 5 = Very much agree)
-        - Thank you to user for completing the survey
-            - Thank you calls the user's name that they inputted during the "Owner Data" section of the survey
+        - Today's date is printed for user's information.
+        - Request for user to answer the below questions.
+        - Explanation of how to answer and the 0-5 figures for the answer input (0 = Thoroughly disagree; 5 = Very much agree).
+        - Thank you to user for completing the survey.
+            - Thank you calls the user's name that they inputted during the `Owner Data` section of the survey.
 
 ### __External Libraries__
 - One external library used in the project:
     - [datetime](https://docs.python.org/3/library/datetime.html)
         - Library was installed via the terminal and then imported in the main code
-        - Objects used were **.today** and **.strftime**
+        - Objects used were `.today` and `.strftime`
             - datetime was used to capture today's date and inform the user within the terminal at the beginning of the survey, so they are aware of the date they have completed the survey on.
 
 ## __Testing__
@@ -82,7 +82,40 @@ I appreciate you taking the time to look over this project and I am eager to exp
 ![PEP8 Validation](assets/images/pep8_valid.PNG)
 
 ## __Deployment__
+This project was deployed using Code Institute's mock terminal for Heroku.
 
+- **Steps for Heroku deployment:**
+    - Fork or Clone [this](https://github.com/LunieLu/pawsitively-survey) repository.
+    - Create a new Heroku app.
+    - Under the settings tab for the new app, go to the Config Vars section.
+    - Add `PORT` in the KEY section and add `8000` into the VALUE section
+    - Still in the settings tab, go to the Buildbacks section.
+    - Click "Add Buildbacks" and choose `Python` and then `NodeJS` in that order.
+    - **Unfortunately Heroku has currently disabled the functionality of connecting to GitHub, so you will need to follow the below steps:**
+        - For users without MFA/2FA:
+            - Open the Terminal in your Gitpod workspace.
+            - Enter the command `heroku login -i` to login to your Heroku account.
+            - Enter the command `heroku apps` to get the app name for this repo.
+            - Enter the command `heroku git:remote -a app_name` with `app_name` replaced with the app name you created.
+            - Add and commit any changes to your code if applicable.
+            - Push code to both GitHub & Heroku by using the below commands:
+                - GitHub: `git push origin main`
+                - Heroku: `git push heroku main`
+        - For users with MFA/2FA:
+            - Open the Terminal in your Gitpod workspace.
+            - Click on Account Settings (under the avatar menu) on the Heroku Dashboard.
+            - Scroll down to the API Key section and click Reveal. Copy the key.
+            - Back in your Gitpod workspace, enter the command: `heroku_config` , and enter your API key you copied when prompted.
+            Enter the command `heroku login -i` to login to your Heroku account.
+            - Enter the command `heroku apps` to get the app name for this repo.
+            - Enter the command `heroku git:remote -a app_name` with `app_name` replaced with the app name you created.
+            - Add and commit any changes to your code if applicable.
+            - Push code to both GitHub & Heroku by using the below commands:
+                - GitHub: `git push origin main`
+                - Heroku: `git push heroku main`
+                    - If you get prompted to log in at any point:
+                        - Enter your Heroku username.
+                        - Enter the API key you just copied.
 
 ## __Credits__
 
