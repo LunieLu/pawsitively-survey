@@ -20,6 +20,7 @@ def feedback():
     print("Please answer the below questions.")
     print("Your answer should be a figure between 0-5")
     print("0 = Thoroughly disagree; 5 = Very much agree.\n")
+    final_answers = []
 
     questions = [
         "Would you recommend us to friends",
@@ -28,40 +29,24 @@ def feedback():
         "Are the staff caring and attentive",
         "Have the team replied in a timely manner"
     ]
-
+    # loop over each question
     for q in questions:
-        get_answer(0, 5, f"{q}? \n")
+        # get_answer(0, 5, f"{q}? \n")
+        # create variable, give it a value
+        answer = get_answer(0, 5, f"{q}? \n")
+        # append answer to final_answers list
+        final_answers.append(answer)
+        # done
 
-    # data_1 = input("1. Would you recommend us to friends? \n")
-    # while not valid_answer(data_1):
-    #     data_1 = input("1. Would you recommend us to friends? \n")
+    return final_answers
 
-    # data_2 = input("2. How happy are you with the service provided? \n")
-    # while not valid_answer(data_2):
-    #     data_2 = input("2. How happy are you with the service provided? \n")
-
-    # data_3 = input("3. How professional is Pawsitively Perfect? \n")
-    # while not valid_answer(data_3):
-    #     data_3 = input("3. How professional is Pawsitively Perfect? \n")
-
-    # data_4 = input("4. Are the staff caring and attentive? \n")
-    # while not valid_answer(data_4):
-    #     data_4 = input("4. Are the staff caring and attentive? \n")
-
-    # data_5 = input("5. Have the team replied in a timely manner? \n")
-    # while not valid_answer(data_5):
-    #     data_5 = input("5. Have the team replied in a timely manner? \n")
-
-
-def collect_data():
-    """
-    Get all of user's input and put into a list.
-    List will then be called at the end of survey.
-    User will be required to input y/n if data is correct.
-    """
-    get_answer = []
-    final_answers =
-    print(f"Your answers are: {final_answers}")
+# def collect_data():
+#     """
+#     Get all of user's input and put into a list.
+#     List will then be called at the end of survey.
+#     User will be required to input y/n if data is correct.
+#     """
+#     # print(f"Your answers are: {final_answers}")
 
 
 def get_answer(min, max, prompt):
@@ -86,8 +71,8 @@ def main():
     """
     owner()
     feedback()
-    print(f"Thank you {user['Name']}!")
-    collect_data()
+    # print(f"Thank you {owner(user['Name'])}!")
+    print(f"Here are your final answers: {answer_list}")
 
 
 print("Thank you for choosing Pawsitively Perfect Pet Care.")
