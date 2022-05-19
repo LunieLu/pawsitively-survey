@@ -42,7 +42,7 @@ def get_answer(low, high, prompt):
     Raises ValueError if incorrect data has been input.
     """
     while True:
-        answer = input(prompt)
+        answer = input(prompt "\n")
         if answer.isnumeric():
             if low <= int(answer) <= high:
                 return int(answer)
