@@ -1,13 +1,3 @@
-def owner_data():
-    """
-    Get owner's information input from user.
-    """
-    print("Please tell us your name.")
-    owner_data.owner = input("Name: \n")
-    print("Please tell us your pet name.")
-    owner_data.pet = input("Pet name: \n")
-
-
 def feedback():
     """
     Feedback input from user.
@@ -27,8 +17,7 @@ def feedback():
     ]
 
     for q in questions:
-        get_answer(0, 5, f"{q}?")
-    
+        get_answer(0, 5, f"{q}? \n")
 
     # data_1 = input("1. Would you recommend us to friends? \n")
     # while not valid_answer(data_1):
@@ -58,7 +47,6 @@ def get_answer(min, max, prompt):
     """
     while True:
         answer = input(prompt)
-        print(answer)
         if answer.isnumeric():
             if min <= int(answer) <= max:
                 return int(answer)
@@ -72,11 +60,15 @@ def main():
     """
     Run all program functions
     """
-    owner_data()
+    owner_data = ['Name', 'Pet Name']
+    user_input = ''
+    user = dict.fromkeys(owner_data, user_input)
+    user['Name'] = input("Please tell us your name: \n")
+    user['Pet Name'] = input("Please tell us your pet's name: \n")
     feedback()
-    print(f"Thank you {owner_data.owner}!")
+    print(f"Thank you {user['Name']}!")
     print("We appreciate you taking the time to complete our survey.")
-    print(f"We hope you and {owner_data.pet} have a great day.")
+    print(f"We hope you and {user['Pet Name']} have a great day.")
 
 
 print("Thank you for choosing Pawsitively Perfect Pet Care.")
