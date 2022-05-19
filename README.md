@@ -12,6 +12,11 @@ The purpose of this short survey is to gather responses from customers to establ
 
 I appreciate you taking the time to look over this project and I am eager to explain more about it below.
 
+[The Live version of this project can be found here.](https://pawsitively-survey.herokuapp.com/)
+
+![Responsive](assets/images/Responsive.PNG)
+![CI Heroku Terminal](assets/images/CI_Terminal.PNG)
+
 ## __Features__
 
 ### __Owner Data__
@@ -19,11 +24,15 @@ I appreciate you taking the time to look over this project and I am eager to exp
     - Collection of User's Name & Pet Name.
     - Information stored in a dictionary.
 
+![Owner Data](assets/images/Owner_data.PNG)
+
 ### __Survey Questions__
 - User is asked 5 questions.
     - Code loops through questions one at a time.
     - Accepts user input `A number between 0-5`:
         - Correct answer will be added to an empty list.
+
+![Survey Questions](assets/images/Survey_Questions.PNG)
 
 ### __Data Validation__
 - User answers to survey questions are checked for incorrect values:
@@ -34,9 +43,14 @@ I appreciate you taking the time to look over this project and I am eager to exp
     - The question is then looped for the user to provide a valid answer.
     - Once a valid answer has been provided, the loop ends.
 
+![Incorrect Number Error](assets/images/Number_Error.PNG)
+![Not A Number Error](assets/images/NonNumber_Error.PNG)
+
 ### __Final Answers__
 - Collective list of answers provided by the user in the `Survey Questions` section.
     - Information is returned to the user in the terminal.
+
+![Final Answers](assets/images/Final_Answers.PNG)
 
 ### __Confirm Final Answers__
 - Code provides a list of the user's answers from each of the survey questions.
@@ -50,6 +64,11 @@ I appreciate you taking the time to look over this project and I am eager to exp
         - If user provides an input that is neither yes or no:
             - Code prints a statement that tells the user to please provide a yes or no.
 
+![Restart Survey](assets/images/Restart.PNG)
+
+![Non Valid Error](assets/images/Non_Valid_Error.PNG)
+![End of Survey](assets/images/End_Of_Survey.PNG)
+
 ### __Other Features__
 - Other features present in the `Main` function:
     - Print statements:
@@ -58,6 +77,8 @@ I appreciate you taking the time to look over this project and I am eager to exp
         - Explanation of how to answer and the 0-5 figures for the answer input (0 = Thoroughly disagree; 5 = Very much agree).
         - Thank you to user for completing the survey.
             - Thank you calls the user's name that they inputted during the `Owner Data` section of the survey.
+
+![Date and Start of Survey](assets/images/Date_Beginning.PNG)
 
 ### __External Libraries__
 - One external library used in the project:
@@ -71,7 +92,7 @@ I appreciate you taking the time to look over this project and I am eager to exp
 - Manual Testing:
     - Provided invalid inputs in each of the validation loops.
         - Examples such as: Strings where numbers expected, inputs out of range, differing inputs from y/n input.
-        - Tested in local terminal.
+        - Tested in local terminal and the Code Institute Heroku terminal.
 
 - [PEP8 online validation check](http://pep8online.com/)
     - Upon first check, the validator returned 2 yellow errors.
