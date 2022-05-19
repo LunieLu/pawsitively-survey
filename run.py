@@ -1,3 +1,6 @@
+from datetime import date
+
+
 def owner():
     """
     Will ask user for their name and pet name.
@@ -72,6 +75,9 @@ def main():
     Run all program functions
     """
     owner()
+    now = date.today()
+    today = now.strftime("%d/%m/%Y")
+    print("Today's date is:", today)
     print("Please answer the below questions.")
     print("Your answer should be a figure between 0-5")
     print("0 = Thoroughly disagree; 5 = Very much agree.\n")
