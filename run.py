@@ -1,3 +1,16 @@
+def owner():
+    """
+    Will ask user for their name and pet name.
+    Saves information into a dictionary.
+    Information will be called at end of survey.
+    """
+    owner_data = ['Name', 'Pet Name']
+    user_input = ''
+    user = dict.fromkeys(owner_data, user_input)
+    user['Name'] = input("Please tell us your name: \n")
+    user['Pet Name'] = input("Please tell us your pet's name: \n")
+
+
 def feedback():
     """
     Feedback input from user.
@@ -40,6 +53,17 @@ def feedback():
     #     data_5 = input("5. Have the team replied in a timely manner? \n")
 
 
+def collect_data():
+    """
+    Get all of user's input and put into a list.
+    List will then be called at the end of survey.
+    User will be required to input y/n if data is correct.
+    """
+    get_answer = []
+    final_answers =
+    print(f"Your answers are: {final_answers}")
+
+
 def get_answer(min, max, prompt):
     """
     Will check if values are equal to or between 0-5.
@@ -60,15 +84,10 @@ def main():
     """
     Run all program functions
     """
-    owner_data = ['Name', 'Pet Name']
-    user_input = ''
-    user = dict.fromkeys(owner_data, user_input)
-    user['Name'] = input("Please tell us your name: \n")
-    user['Pet Name'] = input("Please tell us your pet's name: \n")
+    owner()
     feedback()
     print(f"Thank you {user['Name']}!")
-    print("We appreciate you taking the time to complete our survey.")
-    print(f"We hope you and {user['Pet Name']} have a great day.")
+    collect_data()
 
 
 print("Thank you for choosing Pawsitively Perfect Pet Care.")
