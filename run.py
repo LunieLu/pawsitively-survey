@@ -27,9 +27,8 @@ def feedback():
     ]
 
     for q in questions:
-        # print(f"{q}?")
         get_answer(0, 5, f"{q}?")
-            # data = input(f"{q}? \n")
+    
 
     # data_1 = input("1. Would you recommend us to friends? \n")
     # while not valid_answer(data_1):
