@@ -60,10 +60,11 @@ def confirm():
     If neither, provides error and repeats y/n question.
     """
     user_confirm = input("Are you happy with your answers? y/n: \n")
-    if user_confirm == "y":
+    lower_confirm = user_confirm.lower()
+    if lower_confirm == "y":
         print("Thank you!")
         print(f"Hope you and {owner.user['Pet Name']} have a lovely day!")
-    elif user_confirm == "n":
+    elif lower_confirm == "n":
         main_repeated()
     else:
         print("Please answer y or n.")

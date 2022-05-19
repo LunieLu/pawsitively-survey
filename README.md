@@ -55,6 +55,7 @@ I appreciate you taking the time to look over this project and I am eager to exp
 ### __Confirm Final Answers__
 - Code provides a list of the user's answers from each of the survey questions.
     - if statement requests user to confirm if the final answers are correct, with `y` or `n` (Which stands for yes or no).
+        - Function present that will change capitalised answers into lower case to avoid errors.
         - If user answers `y` for yes:
             - Prints a statement thanking the user.
             - Prints a statement telling the user and their pet (data called from Owner Data section) to have a lovely day.
