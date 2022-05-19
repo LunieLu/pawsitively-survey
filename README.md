@@ -7,9 +7,9 @@ Hello!
 
 Welcome to a Code Institute milestone project - This is my third project as part of CI's Full Stack Diploma in Software Development.
 
-This project was created with Python 3 and is a user survey for the company that my first project was based off; "Pawsitively Perfect Pet Care" (Which is a real company, owned by my mother!)
+This project was created with Python3 and is a user survey for the company that my first project was based off; "Pawsitively Perfect Pet Care" (Which is a real company, owned by my mother!)
 
-The purpose of this short survey is to gather responses from customers to establish how happy they are with the service provided by Pawsitively Perfect Pet Care.
+The purpose of this short survey is to gather responses from customers to establish how happy they are with the service provided by "Pawsitively Perfect Pet Care."
 
 I appreciate you taking the time to look over this project and I am eager to explain more about it below.
 
@@ -20,6 +20,9 @@ I appreciate you taking the time to look over this project and I am eager to exp
 ---
 
 I have tested this project manually:
+- Provided invalid inputs in each of the validation loops.
+    - Examples such as: Strings where numbers expected, inputs out of range, differing inputs from y/n input.
+    - Tested in local terminal.
 
 It has also been validator tested through:
 - [PEP8 online check](http://pep8online.com/)
@@ -27,6 +30,8 @@ It has also been validator tested through:
         - This was due to whitespace within the code.
         - This was quickly removed and the code was pushed to github and tested once more through the validation process.
             - The second check came back with an "All right" result.
+
+![PEP8 Validation](assets/images/pep8_valid.PNG)
 
 ## __Deployment__
 ---
