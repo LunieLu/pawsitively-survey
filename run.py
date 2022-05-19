@@ -40,14 +40,6 @@ def feedback():
 
     return final_answers
 
-# def collect_data():
-#     """
-#     Get all of user's input and put into a list.
-#     List will then be called at the end of survey.
-#     User will be required to input y/n if data is correct.
-#     """
-#     # print(f"Your answers are: {final_answers}")
-
 
 def get_answer(min, max, prompt):
     """
