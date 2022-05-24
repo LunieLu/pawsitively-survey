@@ -108,7 +108,7 @@ def confirm():
     lower_confirm = user_confirm.lower()
     if lower_confirm == "y":
         print("Thank you!")
-        print(f"Hope you and {owner.user['Pet Name']} have a lovely day!")
+        print(f"Hope you and {owner.user['Pet Name']} have a lovely day! \n")
     elif lower_confirm == "n":
         main_repeated()
     else:
@@ -123,7 +123,7 @@ def user_data(data):
     print("Sending answers.....\n")
     update_sheet = SHEET.worksheet("customers")
     update_sheet.append_row(data)
-    print("Answers sent!\n")
+    print("Answers sent!")
 
 
 def main():

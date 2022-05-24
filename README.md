@@ -19,6 +19,17 @@ I appreciate you taking the time to look over this project and I am eager to exp
 
 ## __Features__
 
+### __Main Menu__
+- App starts with a Welcome message and 3 options.
+    - Start
+        - Starts Quiz and proceeds onto `Owner Data` function.
+    - Instructions
+        - Gives a brief explanation of how to complete the survey.
+    - About
+        - Informs the user why the survey is required.
+
+![Main Menu](assets/images/MainMenu.PNG)
+
 ### __Owner Data__
 - Accepts user input:
     - Collection of User's Name & Pet Name.
@@ -70,6 +81,14 @@ I appreciate you taking the time to look over this project and I am eager to exp
 ![Non Valid Error](assets/images/Non_Valid_Error.PNG)
 ![End of Survey](assets/images/End_Of_Survey.PNG)
 
+### __External Data Capture__
+- At the end of the survey, once the user has confirmed they are happy with their answers by choosing `y`:
+    - Answers will be pushed through to an external Google Sheet called `paws_data`
+    - This sheet can be accessed ![here](https://docs.google.com/spreadsheets/d/1yVZZQmQjCLkLVeLlXcN6CXuYTE1V7I_OV62IH0gvgZw/edit?usp=sharing)
+    - All 5 answers will append a row and stay until an editor removes the values from the sheet.
+
+![Google Sheet](assets/images/Paws_dataGS.PNG)
+
 ### __Other Features__
 - Other features present in the `Main` function:
     - Print statements:
@@ -81,12 +100,22 @@ I appreciate you taking the time to look over this project and I am eager to exp
 
 ![Date and Start of Survey](assets/images/Date_Beginning.PNG)
 
+### __Future Features__
+- Capture user's & user's pet details in external Google Sheet.
+- Function to confirm if user would like to be contacted after survey completion for further comment; yes or no answers to also be imported into external Google Sheet.
+
 ### __External Libraries__
-- One external library used in the project:
+- Three external libraries used in the project:
     - [datetime](https://docs.python.org/3/library/datetime.html)
         - Library was installed via the terminal and then imported in the main code
         - Objects used were `.today` and `.strftime`
             - datetime was used to capture today's date and inform the user within the terminal at the beginning of the survey, so they are aware of the date they have completed the survey on.
+    - [gspread](https://docs.gspread.org/en/latest/index.html)
+        - Library was installed via the terminal and then imported in the main code
+        - gspread was used to help push user data from repo to external google sheet through Python functions.
+    - [google auth](https://google-auth.readthedocs.io/en/master/)
+        - Library was installed via the terminal and then imported in the main code
+        - google auth used to help support accessing Credential API files from Google Cloud.
 
 ## __Testing__
 
