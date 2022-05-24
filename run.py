@@ -1,39 +1,35 @@
 from datetime import date
 
 
-def main_menu(start, instructions, about):
+def main_menu():
     """
     Will explain to user the purpose of the app.
     """
     print("Welcome to Short Surveys!")
-    print("Please choose one of the following options:")
-    input("Start, Instructions or About: \n")
-    start = "Start"
-    instructions = "Instructions"
-    about = "About"
-    if not instructions or about:
-        if start:
-            print("Thank you for choosing Pawsitively Perfect Pet Care.")
-            print("We would love to hear your feedback about our services.")
-        else:
-            return
-    elif not start or about:
-        if instructions:
-            print("Instructions:")
-            print("You will be shown 5 questions about Pawsitively Perfect.")
-            print("Please answer these questions by typing in a number from 0 to 5")
-            print("Numbers above 5 will give you an error.")
-            print("Words will give you an error also")
-            print("At the end of the survey, your answers will appear.")
-            print("You will need to confirm if you're happy with them.")
-    elif not start or instructions:
-        if about:
-            print("Our survey has been put together to:")
-            print("- Find out how happy our customers are.")
-            print("- See what our customers think of us.")
-            print("- To help us improve our service.")
+    print("Please choose one of the following options.")
+    choice = input("Start, Instructions or About: \n")
+    choice = choice.lower()
+    if choice == "start":
+        print("Thank you for choosing Pawsitively Perfect Pet Care.")
+        print("We would love to hear your feedback about our services.")
+    elif choice == "instructions":
+        print("Instructions:")
+        print("- You will be shown 5 questions about Pawsitively Perfect.")
+        print("- Please answer questions by entering a number from 0 to 5.")
+        print("- Numbers above 5 will give you an error.")
+        print("- Words will give you an error also")
+        print("- At the end of the survey, your answers will appear.")
+        print("- You will need to confirm if you're happy with them. \n")
+        main_menu()
+    elif choice == "about":
+        print("Our survey has been put together to:")
+        print("- Find out how happy our customers are.")
+        print("- See what our customers think of us.")
+        print("- To help us improve our service. \n")
+        main_menu()
     else:
-        print("Incorrect choice, please try again.")
+        print("Please choose one of the above options. \n")
+        main_menu()
 
 
 def owner():
@@ -111,7 +107,7 @@ def main():
     """
     Run all program functions
     """
-    main_menu("Start", "Instructions", "About")
+    main_menu()
     owner()
     now = date.today()
     today = now.strftime("%d/%m/%Y")
