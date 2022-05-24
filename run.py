@@ -1,6 +1,41 @@
 from datetime import date
 
 
+def main_menu(start, instructions, about):
+    """
+    Will explain to user the purpose of the app.
+    """
+    print("Welcome to Short Surveys!")
+    print("Please choose one of the following options:")
+    input("Start, Instructions or About: \n")
+    start = "Start"
+    instructions = "Instructions"
+    about = "About"
+    if not instructions or about:
+        if start:
+            print("Thank you for choosing Pawsitively Perfect Pet Care.")
+            print("We would love to hear your feedback about our services.")
+        else:
+            return
+    elif not start or about:
+        if instructions:
+            print("Instructions:")
+            print("You will be shown 5 questions about Pawsitively Perfect.")
+            print("Please answer these questions by typing in a number from 0 to 5")
+            print("Numbers above 5 will give you an error.")
+            print("Words will give you an error also")
+            print("At the end of the survey, your answers will appear.")
+            print("You will need to confirm if you're happy with them.")
+    elif not start or instructions:
+        if about:
+            print("Our survey has been put together to:")
+            print("- Find out how happy our customers are.")
+            print("- See what our customers think of us.")
+            print("- To help us improve our service.")
+    else:
+        print("Incorrect choice, please try again.")
+
+
 def owner():
     """
     Will ask user for their name and pet name.
@@ -59,7 +94,8 @@ def confirm():
     If n, loops back to questions.
     If neither, provides error and repeats y/n question.
     """
-    user_confirm = input("Are you happy with your answers? y/n: \n")
+    print("Are you happy with your answers?")
+    user_confirm = input("Please enter y for yes or n for no: \n")
     lower_confirm = user_confirm.lower()
     if lower_confirm == "y":
         print("Thank you!")
@@ -75,6 +111,7 @@ def main():
     """
     Run all program functions
     """
+    main_menu("Start", "Instructions", "About")
     owner()
     now = date.today()
     today = now.strftime("%d/%m/%Y")
@@ -101,6 +138,4 @@ def main_repeated():
     confirm()
 
 
-print("Thank you for choosing Pawsitively Perfect Pet Care.")
-print("We would love to hear your feedback about our services.")
 main()
