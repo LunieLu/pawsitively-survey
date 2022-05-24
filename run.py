@@ -13,10 +13,6 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('paws_data')
 
-customer = SHEET.worksheet('customers')
-
-data = customer.get_all_values()
-print(data)
 
 def main_menu():
     """
@@ -120,6 +116,16 @@ def confirm():
         confirm()
 
 
+def user_data(data):
+    """
+    To collect all of users data and push to google sheet.
+    """
+    print("Sending answers.....\n")
+    update_sheet = SHEET.worksheet("customers")
+    update_sheet.append_row(data)
+    print("Answers sent!\n")
+
+
 def main():
     """
     Run all program functions
@@ -136,6 +142,7 @@ def main():
     print(f"Thank you {owner.user['Name']}!")
     print(f"Here are your final answers: {feedback.final_answers}")
     confirm()
+    user_data(feedback.final_answers)
 
 
 def main_repeated():
@@ -149,6 +156,7 @@ def main_repeated():
     print(f"Thank you {owner.user['Name']}!")
     print(f"Here are your final answers: {feedback.final_answers}")
     confirm()
+    user_data(feedback.final_answers)
 
 
 main()
