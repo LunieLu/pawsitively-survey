@@ -129,6 +129,7 @@ I appreciate you taking the time to look over this project and I am eager to exp
         - This was due to whitespace within the code.
         - This was quickly removed and the code was pushed to github and tested once more through the validation process.
             - The second check came back with an "All right" result.
+    - _24.05.2022: Due to last minute additions into functionality, code was once again tested through PEP8 validation checks and came back with an "All right" result._
 
 ![PEP8 Validation](assets/images/pep8_valid.PNG)
 
@@ -171,7 +172,7 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 ## __Credits__
 
 - Code Institute for the deployment terminal and template.
-- Code inspired by Code Institute's Anna Greaves' "Love Sandwiches" walkthrough project; including main structure and influence for the valid_answers validation loop.
+- Code inspired by Code Institute's Anna Greaves' "Love Sandwiches" walkthrough project; including main structure, influence for the valid_answers validation loop and tutorial explanation of how to connect Google Apis, Google Cloud and Google Sheets for external data capturing.
 - [datetime external library](https://docs.python.org/3/library/datetime.html) used to call today's date for user information.
 
 ## __Acknowledgements__
