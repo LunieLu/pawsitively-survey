@@ -56,6 +56,9 @@ def owner():
     owner.user = dict.fromkeys(owner_data, user_input)
     owner.user['Name'] = input("Please tell us your name: \n")
     owner.user['Pet Name'] = input("Please tell us your pet's name: \n")
+    if not user_input.isalpha():
+        print("Error: Symbols were used, please try again.")
+        owner()
 
 
 def feedback():
