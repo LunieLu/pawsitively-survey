@@ -34,6 +34,8 @@ I appreciate you taking the time to look over this project and I am eager to exp
 - Accepts user input:
     - Collection of User's Name & Pet Name.
     - Information stored in a dictionary.
+- Has an if statement that checks for symbols in user's answer.
+    - If users input contains symbols, error is raised and user will need to input Name & Pet Name again.
 
 ![Owner Data](assets/images/Owner_data.PNG)
 
